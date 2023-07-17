@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Almacén CDMX - iAutopartes</title>
+
+    <!--Vinculación con el archivo normalize.css-->
+    <link rel="preload" href="css/normalize.css" as="style" >
+    <link rel="stylesheet" href="css/normalize.css"> <!--Por su importancia, debe ser el primer archivo en cargar-->
+
+   <!--Enlace para la API de Google Fonts-->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet"> -->
+   <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Lato:wght@300&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Libre+Baskerville&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+   <link rel="icon" href="img/logo-sec1.jpeg"> <!--ÍCONO DE LA PÁGINA-->
+
+   <!-- Toastify CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+  <!--Vinculación del HTML a la hoja de estilos-->
+  <link rel="preload" href="css/style.css" as="style" >
+  <link href="css/style.css" rel="stylesheet">
+  <!--La hoja de estilos personalizada debe ser la última en agregarse-->
+
+</head>
+
+<body>
+    <header> <!-- HEADER-->
+        <div class="navegador-superior">
+            <nav class="black-nav-bar">
+                <a href="https://www.autopartesmariana.mx">Mariana Autopartes</a>
+                <p>|</p>
+                <a href="./index.html">Gestión de Almacén</a>
+                <p>|</p>
+                <a href="">Mostrador de pedidos</a>
+            </nav>
+        </div>
+
+        <div class="separador-navegador"></div>
+
+        <div class="navegador-inferior">
+            <div class="logo-izquierda">
+                <a href="./index.html"></a>
+            </div>
+        
+            <div class="main-links">
+                <div class="main-links-part">
+                    <nav class="main-links-nav">
+                        <a href="./b4n314.html" class="logged-in" id="btn-bandeja">Bandeja de Entrada</a>
+                        <a href="" class="logged-in">Mi Cuenta</a>
+                        <a href="" class="logged-in" id="logout">Cerrar Sesión</a>
+                    </nav>
+                </div>
+            </div>
+        
+            <div class="inferior-derecha">
+                <a href="index.html"></a> <!--Se queda para centrar-->
+            </div>
+        </div>
+    </header> <!-- END OF HEADER-->
+
+
+    <!--   BODY-->
+    <div action="" class="formulario logged-out"> <!--VENTANA LOGIN-->
+        <div class="contenedor-form"> <!--Contenedor vertical general-->
+            <div class="contenedor-opciones">
+                <a class="iniciar logged-out" id="btn-iniciar">Iniciar Sesión</a>
+                <a class="registrar logged-out" id="btn-registrar">Registrarse</a>
+            </div>
+
+            <div class="entradas" >
+                <div id="iniciar"></div> <!--Iniciar y registrar = Tasks-container-->
+                <div id="registrar"></div>                
+                <!--<button type="button" class="boton logged-out" id="googleLogin">Google</button>-->
+            </div>
+        </div>
+    </div>
+
+    <div id="posts"></div>
+    <div id="registros"></div>
+    
+
+    <section class="modal "> <!--VENTANA PARA MODAL INFORMATIVA: nuevo registro  -->
+        <div class="modal__container">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-square-x modal_x" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <rect x="4" y="4" width="16" height="16" rx="2" />
+                <path d="M10 10l4 4m0 -4l-4 4" /> <!--IMAGEN DE X PARA CERRAR VENTANA-->
+            </svg>
+
+            <h2 class="modal__title">¡Recibimos su solicitud!</h2>
+            <h3 class="modal__paragraph">
+                En unos instantes un administrador atenderá la información recibida
+            </h3>
+        </div>
+    </section>
+    
+
+    <!--  END OF BODY-->
+
+
+    <!-- Toastify js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <!-- SCRIPTS -->
+    <script src='js/index.js' type="module"></script>
+    
+</body>
+
+<footer class="footer" id="footer">
+    <main class="container-footer">
+        <div class="footer1">
+            <div>
+                <img src="img/autopartes-marianasf.png" alt="Comercializadora de Intercambio Mariana" >
+            </div>
+            <div>
+                <hr>
+                <p>© 2023 Comercializadora de Intercambio Mariana SA de CV </p>
+            </div>
+        </div>
+        <div class="footer2">
+            <nav class="footer-nav-bar">
+                <a href="">Términos y condiciones</a>
+                <p>|</p>
+                <a href="">Política de Privacidad</a>
+                <p>|</p>
+                <a href="">Reglamento General</a>
+            </nav>
+        </div>
+    </main>
+</footer>
+
+</html>

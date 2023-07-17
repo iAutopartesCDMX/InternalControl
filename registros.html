@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevos Registros - iAutopartes</title>
+    <!--Vinculación con el archivo normalize.css-->
+    <link rel="preload" href="css/normalize.css" as="style" >
+    <link rel="stylesheet" href="css/normalize.css"> <!--Por su importancia, debe ser el primer archivo en cargar-->
+
+
+
+   <!--Enlace para la API de Google Fonts-->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet"> -->
+   <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Lato:wght@300&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Libre+Baskerville&display=swap" rel="stylesheet">
+   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+   <link rel="icon" href="img/logo-sec1.jpeg"> <!--ÍCONO DE LA PÁGINA-->
+
+   <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/flatly/bootstrap.min.css" integrity="sha384-qF/QmIAj5ZaYFAeQcrQ6bfVMAh4zZlrGwTPY7T/M+iTTLJqJBJjwwnsE5Y0mV7QK" crossorigin="anonymous"> -->
+  
+   <!-- Toastify CSS -->
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
+   <!--Vinculación del HTML a la hoja de estilos-->
+   <link rel="preload" href="css/style.css" as="style" >
+   <link href="css/style.css" rel="stylesheet">
+   <!--La hoja de estilos personalizada debe ser la última en agregarse-->
+</head>
+
+<body>
+
+    <header> <!-- HEADER-->
+        <div class="navegador-superior">
+            <nav class="black-nav-bar">
+                <a href="https://www.up.edu.mx/">Universidad Panamericana</a>
+                <p>|</p>
+                <a href="./index.html">Agentes de Excelencia</a>
+                <p>|</p>
+                <a href="">Dirección de Operaciones</a>
+            </nav>
+        </div>
+        <div class="separador-navegador"></div>
+
+        <div class="navegador-inferior">
+            <div class="logo-izquierda">
+                <a href="./index.html"></a>
+            </div>
+            
+            <div class="main-links">
+                <div class="main-links-part">
+                    <nav class="main-links-nav">
+                        <a href="./index.html" class="logged-in">Inicio</a>
+                        <a href="" class="logged-in">Mi Cuenta</a>
+                        <a href="./b4n314.html" class="logged-in" >Bandeja de Entrada</a>
+                    </nav>
+                </div>
+            </div>
+            
+            <div class="inferior-derecha">
+                <a href="index.html"></a>
+            </div>
+        </div>
+    </header> <!--END OF HEADER-->
+
+    <div id="registroHTML"></div>
+
+
+    <section class="division-interfaz colocacion__cuerpo-bandeja">
+        <div class="contenedor-bandeja sombra" >
+            <h2>Registros Recibidos</h2>
+                <hr>
+                <div class="grow1 layout__limite">
+                    <div id="tasks-container"></div>
+                </div>
+        </div>
+
+        <div class="menu-lat">
+            <div class="v-line"></div>
+            <div class="bloque-menu">
+                <p class="subtitle-reception">Administrar</p>
+                <div class="menu-lat-option">
+                    <label for="">01</label>
+                    <a href="">Tickets Abiertos</a>
+                </div>
+                <div class="menu-lat-option">
+                    <label for="">02</label>
+                    <a href="">Generar Informe</a>
+                </div>
+                <div class="menu-lat-option">
+                    <label for="">03</label>
+                    <a href="">Visualizar Estadísticas</a>
+                </div>
+                <div class="menu-lat-option">
+                    <label for="">04</label>
+                    <a href="./b4n314.html" class="btnRegistros" id="btnRegistros" >Bandeja de Entrada</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+
+
+    <section class="modal "> <!--VENTANA PARA MODAL ASIGNAR GRADO  -->
+        <div class="modal__container">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-square-x modal_x" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                <rect x="4" y="4" width="16" height="16" rx="2" />
+                <path d="M10 10l4 4m0 -4l-4 4" /> <!--IMAGEN DE X PARA CERRAR VENTANA-->
+            </svg>
+
+            <h2 class="modal__title">Asignación de grado <div id="nombre-nuevo-registro"></div></h2>
+
+            <form action="" class="column-drop-css formulario" id="grado-form">
+                <div >
+                    <div class="entrada-modal">
+                        <div>
+                            <label for=""></label>
+                            <select id="grado" required>
+                                <option disabled selected> --Seleccione un Grado-- </option>
+                                <option value="admin">Administrador</option>
+                                <option value="super">Supervisor</option>
+                                <option value="oper">Operador</option>
+                            </select>
+                        </div>
+                    </div>
+                <button class="boton uno-3-drop" id="btn-grado-form" >
+                    Enviar
+                </button>
+            </form>
+        </div>
+    </section>
+    
+
+    
+
+
+    <!-- Toastify js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <!-- SCRIPTS -->
+    <script src='js/index2.js' type="module"></script>
+</body>
+
+
+
+<footer class="footer" id="footer">
+    <main class="container-footer">
+        <div class="footer1">
+            <div>
+                <img src="img/autopartes-marianasf.png" alt="Comercializadora de Intercambio Mariana" >
+            </div>
+            <div>
+                <hr>
+                <p>© 2023 Comercializadora de Intercambio Mariana SA de CV </p>
+            </div>
+        </div>
+        <div class="footer2">
+            <nav class="footer-nav-bar">
+                <a href="">Términos y condiciones</a>
+                <p>|</p>
+                <a href="">Política de Privacidad</a>
+                <p>|</p>
+                <a href="">Reglamento General</a>
+            </nav>
+        </div>
+    </main>
+</footer>
+
+
+</html>
