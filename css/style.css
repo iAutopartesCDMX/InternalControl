@@ -762,15 +762,24 @@ h1, h2, h3{
   justify-content: center;
   width: 30rem;
   height: auto;
-}
+  }
+
+
 @media (min-width: 768px) {
   .footer1 img{
     width: 40rem;
     height: 10rem;
   }
+  .footer1-texto{
+    font-size: large;
+  }
+  .footer2{
+    font-size: large;
+  }
+  
 } 
 
-@media (min-width: 480px) {
+@media (min-width: 410px) {
   .footer1 img{
     width: 15rem;
     max-height: 100%;
